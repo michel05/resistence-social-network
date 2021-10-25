@@ -9,7 +9,6 @@ import com.michel.projects.starwars.resistancesocialnetwork.resources.repository
 import com.michel.projects.starwars.resistancesocialnetwork.resources.repository.entity.RebelLocationEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.stream.Collectors;
 
 @Service

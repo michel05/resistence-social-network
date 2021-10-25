@@ -1,7 +1,9 @@
 package com.michel.projects.starwars.resistancesocialnetwork.resources.repository.entity;
 
 import com.michel.projects.starwars.resistancesocialnetwork.domain.model.ItemType;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 

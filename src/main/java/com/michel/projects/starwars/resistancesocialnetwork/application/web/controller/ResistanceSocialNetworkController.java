@@ -2,7 +2,9 @@ package com.michel.projects.starwars.resistancesocialnetwork.application.web.con
 
 import com.michel.projects.starwars.resistancesocialnetwork.application.web.controller.response.RebelBetrayerMarkResponse;
 import com.michel.projects.starwars.resistancesocialnetwork.application.web.controller.response.RebelCreatedResponse;
-import com.michel.projects.starwars.resistancesocialnetwork.domain.model.*;
+import com.michel.projects.starwars.resistancesocialnetwork.domain.model.Rebel;
+import com.michel.projects.starwars.resistancesocialnetwork.domain.model.RebelLocation;
+import com.michel.projects.starwars.resistancesocialnetwork.domain.model.SupplyExchange;
 import com.michel.projects.starwars.resistancesocialnetwork.domain.service.ExchangeMarketManagerService;
 import com.michel.projects.starwars.resistancesocialnetwork.domain.service.RebelManagerService;
 import org.springframework.beans.factory.annotation.Autowired;

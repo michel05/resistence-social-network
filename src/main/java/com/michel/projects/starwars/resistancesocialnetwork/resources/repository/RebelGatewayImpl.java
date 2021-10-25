@@ -2,7 +2,10 @@ package com.michel.projects.starwars.resistancesocialnetwork.resources.repositor
 
 import com.michel.projects.starwars.resistancesocialnetwork.domain.exceptions.RebelNotFoundException;
 import com.michel.projects.starwars.resistancesocialnetwork.domain.gateway.RebelGateway;
-import com.michel.projects.starwars.resistancesocialnetwork.domain.model.*;
+import com.michel.projects.starwars.resistancesocialnetwork.domain.model.Inventory;
+import com.michel.projects.starwars.resistancesocialnetwork.domain.model.InventoryItem;
+import com.michel.projects.starwars.resistancesocialnetwork.domain.model.Rebel;
+import com.michel.projects.starwars.resistancesocialnetwork.domain.model.RebelLocation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

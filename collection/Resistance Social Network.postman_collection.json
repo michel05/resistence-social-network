@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "7f892d59-97e9-4910-9b52-7dea15259eb9",
+		"name": "Resistance Social Network",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Rebel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Obi\",\r\n    \"gender\": \"MALE\",\r\n    \"age\": 21,\r\n    \"inventory\": {\r\n        \"items\": [\r\n            {\r\n                \"quantity\": 1,\r\n                \"item_type\": \"FOOD\"\r\n            },\r\n            {\r\n                \"quantity\": 1,\r\n                \"item_type\": \"WATER\"\r\n            },\r\n            {\r\n                \"quantity\": 1,\r\n                \"item_type\": \"WEAPON\"\r\n            },\r\n            {\r\n                \"quantity\": 1,\r\n                \"item_type\": \"AMMO\"\r\n            }\r\n        ]\r\n    },\r\n    \"location\": {\r\n        \"latitude\": \"123123123\",\r\n        \"longitude\": \"123123213\",\r\n        \"war_base_name\": \"Home\"\r\n    },\r\n    \"betrayer\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/social-network/rebels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social-network",
+						"rebels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report percentage of betrayers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/social-network/reports/betrayers/percentage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social-network",
+						"reports",
+						"betrayers",
+						"percentage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report percentage of rebels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/social-network/reports/rebels/percentage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social-network",
+						"reports",
+						"rebels",
+						"percentage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report resource average",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/social-network/reports/resources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social-network",
+						"reports",
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report resource points lost by betrayer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/social-network/reports/resources/points/lost-by-betrayer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social-network",
+						"reports",
+						"resources",
+						"points",
+						"lost-by-betrayer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Rebel Location",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n        \"latitude\": \"54321\",\r\n        \"longitude\": \"12345\",\r\n        \"war_base_name\": \"Base 3\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/social-network/rebels/1/location",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social-network",
+						"rebels",
+						"1",
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report betrayer rebel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/social-network/rebels/betrayer/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social-network",
+						"rebels",
+						"betrayer",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "market exchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requester_offer\": {\r\n        \"rebel_id\": 1,\r\n        \"items\": [\r\n            {\r\n                \"quantity\": 2,\r\n                \"item_type\": \"FOOD\"\r\n            }\r\n        ]\r\n    },\r\n    \"receiver_offer\": {\r\n        \"rebel_id\": 7,\r\n        \"items\": [\r\n           {\r\n                \"quantity\": 1,\r\n                \"item_type\": \"WATER\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/social-network/market/exchange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"social-network",
+						"market",
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
